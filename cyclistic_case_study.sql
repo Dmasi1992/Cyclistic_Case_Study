@@ -1,8 +1,6 @@
 WITH
 
     combined_raw_data AS
-
-
     (
     SELECT*
         EXCEPT (start_station_id, end_station_id)
@@ -66,7 +64,7 @@ WITH
     ),
 
 
-    remove_nulls AS 
+    remove_nulls AS
     (
     SELECT*
     FROM
@@ -105,7 +103,6 @@ WITH
     ),
 
 
-
     ride_month AS 
     (
     SELECT *,
@@ -128,6 +125,7 @@ WITH
     FROM
         ride_day_of_week
     ),
+
 
     ride_start_hour AS 
     (
@@ -198,9 +196,6 @@ WITH
         cd.ride_id = ll.ride_id
     )
 
-
     
 SELECT*
 FROM join_td
-
-
